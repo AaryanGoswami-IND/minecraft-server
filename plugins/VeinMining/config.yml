@@ -1,0 +1,7 @@
+# Add or remove items from the list to change the items that are allowed to be used in the game. Please create a file with the name of the weapon
+# example: axe.yml, pickaxe.yml, shovel.yml, hand.yml
+weapons:
+  - hand
+  - pickaxe
+  - shovel
+  - axe

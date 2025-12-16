@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (exclude old logs, keep structure)
+logs/*.log.gz
+logs/*.log
+
+# Console history
+.console_history
+
+# Cache (will be regenerated)
+cache/
+libraries/
+versions/
+
+# User cache (will be regenerated)
+usercache.json

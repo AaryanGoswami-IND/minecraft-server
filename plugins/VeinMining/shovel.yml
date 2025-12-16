@@ -1,0 +1,12 @@
+experience: 0 # Amount of experience to drop
+radius: 3
+blocks:
+  - CLAY
+  - GRAVEL
+  - MUD
+  - MUDDY_GRAVEL
+  - MUDDY_MANGROVE_ROOTS
+  - SAND
+  - RED_SAND
+  - SOUL_SAND
+  - SOUL_SOIL

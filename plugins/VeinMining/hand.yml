@@ -1,0 +1,5 @@
+experience: 0 # Amount of experience to drop
+radius: 3
+blocks:
+  -
+
