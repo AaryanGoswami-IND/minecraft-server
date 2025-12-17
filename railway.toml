@@ -3,7 +3,8 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = ""
+numReplicas = 1
+startCommand = "/bin/bash /server/start.sh"
 healthcheckPath = ""
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"

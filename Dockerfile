@@ -14,9 +14,9 @@ COPY . /server/
 # Make sure EULA is accepted
 RUN echo "eula=true" > /server/eula.txt
 
-# Set memory allocation (adjust based on Railway plan)
-ENV MEMORY_MIN=1G
-ENV MEMORY_MAX=2G
+# Set memory allocation (reduced for Railway free tier)
+ENV MEMORY_MIN=512M
+ENV MEMORY_MAX=1G
 
 # Expose Minecraft port (Java)
 EXPOSE 25565

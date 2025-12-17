@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">⛏️</div>
+                <span>Server Manager</span>
+            </div>
+            
+            <nav class="nav">
+                <a href="#" class="nav-item active" data-tab="console">
+                    <span class="nav-icon">📟</span>
+                    Console
+                </a>
+                <a href="#" class="nav-item" data-tab="players">
+                    <span class="nav-icon">👥</span>
+                    Players
+                </a>
+                <a href="#" class="nav-item" data-tab="settings">
+                    <span class="nav-icon">⚙️</span>
+                    Settings
+                </a>
+            </nav>
+            
+            <div class="server-status">
+                <div class="status-indicator" id="statusIndicator"></div>
+                <div class="status-text">
+                    <span class="status-label">Server Status</span>
+                    <span class="status-value" id="statusText">Offline</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <h1>Minecraft Server</h1>
+                <div class="header-actions">
+                    <button class="btn btn-success" id="startBtn">
+                        <span>▶</span> Start
+                    </button>
+                    <button class="btn btn-warning" id="restartBtn">
+                        <span>🔄</span> Restart
+                    </button>
+                    <button class="btn btn-danger" id="stopBtn">
+                        <span>⏹</span> Stop
+                    </button>
+                </div>
+            </header>
+
+            <!-- Console Tab -->
+            <section class="tab-content active" id="console-tab">
+                <div class="console-container">
+                    <div class="console-header">
+                        <span>Server Console</span>
+                        <button class="btn-small" id="clearConsole">Clear</button>
+                    </div>
+                    <div class="console" id="console"></div>
+                    <div class="console-input">
+                        <span class="prompt">&gt;</span>
+                        <input type="text" id="commandInput" placeholder="Enter command..." autocomplete="off">
+                        <button class="btn btn-primary" id="sendCmd">Send</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Players Tab -->
+            <section class="tab-content" id="players-tab">
+                <div class="card">
+                    <h2>Online Players</h2>
+                    <p class="text-muted">Player list will appear when server is running.</p>
+                    <div id="playerList" class="player-list"></div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section class="tab-content" id="settings-tab">
+                <div class="card">
+                    <h2>Server Properties</h2>
+                    <div class="properties-grid" id="propertiesGrid"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
